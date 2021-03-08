@@ -7,3 +7,9 @@ SELECT * FROM `ospiti`;
 ●    Selezionare tutti gli ospiti con document type = CI
 
 SELECT * FROM `ospiti` where `document_type` = "CI";
+
+-----------------------------------------------------------------------------------------------------------
+
+●    Selezionare i paganti che abbiano un ospite id associato
+
+SELECT * FROM `paganti` WHERE `ospite_id` <> "NULL";
