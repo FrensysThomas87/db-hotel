@@ -13,3 +13,11 @@ SELECT * FROM `ospiti` where `document_type` = "CI";
 ●    Selezionare i paganti che abbiano un ospite id associato
 
 SELECT * FROM `paganti` WHERE `ospite_id` <> "NULL";
+
+----------------------------------------------------------------------------------------------------------
+
+●    Selezionare tutte le stanze del primo piano
+
+SELECT * FROM `stanze` WHERE `floor` = 1;
+
+
