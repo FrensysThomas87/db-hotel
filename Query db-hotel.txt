@@ -20,4 +20,12 @@ SELECT * FROM `paganti` WHERE `ospite_id` <> "NULL";
 
 SELECT * FROM `stanze` WHERE `floor` = 1;
 
+-----------------------------------------------------------------------------------------------------------
+
+Selezionare tutti gli ospiti che iniziano per E
+
+SELECT * FROM ospiti where `name` like 'E%';
+
+----------------------------------------------------------------------------------------------------------
+
 
