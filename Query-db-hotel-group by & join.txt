@@ -75,5 +75,6 @@ Join
 	SELECT * FROM prenotazioni INNER JOIN pagamenti ON prenotazioni.id = pagamenti.prenotazione_id WHERE prenotazione_id = 7
 
 ●    Le stanze sono state tutte prenotate almeno una volta? (Visualizzare le stanze non ancora prenotate)
+	SELECT stanze.room_number FROM `prenotazioni` RIGHT JOIN `stanze` ON stanze.id = prenotazioni.stanza_id WHERE prenotazioni.id IS NULL
 
 
