@@ -42,7 +42,8 @@ Group by
 	SELECT COUNT(`id`) created_at, hour(created_at) FROM `prenotazioni` GROUP BY hour(prenotazioni.created_at)
 
 ●    Quante prenotazioni ha fatto l’ospite che ha fatto più prenotazioni?
-	select hour(created_at) as hour, count(*) as Count from prenotazioni group by hour(prenotazioni.created_at)
+	SELECT COUNT(ospite_id), ospite_id FROM prenotazioni_has_ospiti GROUP BY ospite_id;
+	
 
 
 ----------------------------------------------------------------------------------
@@ -72,9 +73,9 @@ Join
 	ON pagamenti.prenotazione_id = prenotazioni.id INNER JOIN stanze ON prenotazioni.stanza_id = stanze.id WHERE `floor` = 1;
 
 ●    Prendi i dati di fatturazione per la prenotazione con id=7
-	SELECT * FROM prenotazioni INNER JOIN pagamenti ON prenotazioni.id = pagamenti.prenotazione_id WHERE prenotazione_id = 7
+	SELECT * FROM prenotazioni INNER JOIN pagamenti ON prenotazioni.id = pagamenti.prenotazione_id WHERE prenotazione_id = 7;
 
 ●    Le stanze sono state tutte prenotate almeno una volta? (Visualizzare le stanze non ancora prenotate)
-	SELECT stanze.room_number FROM `prenotazioni` RIGHT JOIN `stanze` ON stanze.id = prenotazioni.stanza_id WHERE prenotazioni.id IS NULL
+	SELECT stanze.room_number FROM `prenotazioni` RIGHT JOIN `stanze` ON stanze.id = prenotazioni.stanza_id WHERE prenotazioni.id IS NULL;
 
 
