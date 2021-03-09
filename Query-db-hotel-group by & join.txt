@@ -12,9 +12,11 @@
 	SELECT * FROM `ospiti` WHERE `name` LIKE 'D%';
 
 ●    Calcola il totale degli ordini accepted
-	SELECT SUM(`price`) AS Totale FROM `pagamenti` WHERE `status` = "accepted"
+	SELECT SUM(`price`) AS Totale FROM `pagamenti` WHERE `status` = "accepted";
 
 ●    Qual è il prezzo massimo pagato?
+	SELECT MAX(`price`) FROM `pagamenti` WHERE `status` = "accepted";
+
 ●    Seleziona gli ospiti riconosciuti con patente e nati nel 1975
 ●    Quanti paganti sono anche ospiti?
 ●    Quanti posti letto ha l’hotel in totale?
