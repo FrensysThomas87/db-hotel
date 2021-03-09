@@ -5,6 +5,9 @@
 	SELECT * FROM `ospiti` WHERE `date_of_birth` > "1988-12-31"
 
 ●    Seleziona tutti gli ospiti che hanno più di 20 anni (al momento dell’esecuzione della query)
+	SELECT `name`,`lastname`,`date_of_birth`,TIMESTAMPDIFF(YEAR,`date_of_birth`, CURRENT_TIMESTAMP ) AS age 
+	FROM `ospiti` WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`, CURRENT_TIMESTAMP ) > 20
+
 ●    Seleziona tutti gli ospiti il cui nome inizia con la D
 ●    Calcola il totale degli ordini accepted
 ●    Qual è il prezzo massimo pagato?
