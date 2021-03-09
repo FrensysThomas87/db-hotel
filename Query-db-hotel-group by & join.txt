@@ -61,9 +61,12 @@ Join
 	FROM prenotazioni_has_ospiti
 	LEFT JOIN ospiti
 	ON ospiti.id = ospite_id
-	GROUP BY ospite_id
+	GROUP BY ospite_id;
 
 ●    Stampare Nome, Cognome, Prezzo e Pagante per tutte le prenotazioni fatte a Maggio 2018
+	SELECT price, pagante_id, pagante_id, prenotazioni.created_at FROM pagamenti INNER JOIN prenotazioni 
+	ON prenotazioni.id = pagamenti.prenotazione_id INNER JOIN paganti ON paganti.id = pagamenti.pagante_id WHERE prenotazioni.created_at LIKE "%2018-05%";
+
 ●    Fai la somma di tutti i prezzi delle prenotazioni per le stanze del primo piano
 
 ●    Prendi i dati di fatturazione per la prenotazione con id=7
