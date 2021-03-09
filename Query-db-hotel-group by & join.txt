@@ -68,6 +68,8 @@ Join
 	ON prenotazioni.id = pagamenti.prenotazione_id INNER JOIN paganti ON paganti.id = pagamenti.pagante_id WHERE prenotazioni.created_at LIKE "%2018-05%";
 
 ●    Fai la somma di tutti i prezzi delle prenotazioni per le stanze del primo piano
+	SELECT SUM(price) AS somma_stanze_primo_piano FROM `pagamenti` INNER JOIN prenotazioni 
+	ON pagamenti.prenotazione_id = prenotazioni.id INNER JOIN stanze ON prenotazioni.stanza_id = stanze.id WHERE `floor` = 1;
 
 ●    Prendi i dati di fatturazione per la prenotazione con id=7
 	SELECT * FROM prenotazioni INNER JOIN pagamenti ON prenotazioni.id = pagamenti.prenotazione_id WHERE prenotazione_id = 7
