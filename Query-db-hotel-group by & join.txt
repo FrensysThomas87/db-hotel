@@ -18,6 +18,8 @@
 	SELECT MAX(`price`) FROM `pagamenti` WHERE `status` = "accepted";
 
 ●    Seleziona gli ospiti riconosciuti con patente e nati nel 1975
+	SELECT * FROM `ospiti` WHERE `document_type` = "Driver License" AND `date_of_birth` >= "1975-01-01" AND `date_of_birth` <= "1975-12-31";
+
 ●    Quanti paganti sono anche ospiti?
 ●    Quanti posti letto ha l’hotel in totale?
 
