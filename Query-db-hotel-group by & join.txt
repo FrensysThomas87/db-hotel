@@ -21,6 +21,8 @@
 	SELECT * FROM `ospiti` WHERE `document_type` = "Driver License" AND `date_of_birth` >= "1975-01-01" AND `date_of_birth` <= "1975-12-31";
 
 ●    Quanti paganti sono anche ospiti?
+	SELECT * FROM `paganti` WHERE `ospite_id` IS NOT NULL;	
+
 ●    Quanti posti letto ha l’hotel in totale?
 
 ----------------------------------------------------------------------------------
